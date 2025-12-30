@@ -1,0 +1,25 @@
+.background{
+  background: linear-gradient(215deg, #CBE9D4, #5bcf78);
+}
+.logo {
+    width: 140px;
+    height: 140px;
+    padding: 10px;
+}
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginBox {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.signUP{
+  color: #0AD666;
+}
