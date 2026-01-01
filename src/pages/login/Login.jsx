@@ -41,12 +41,7 @@ export default function Login() {
                             <Button variant="success" type="submit" className="w-100 mb-3">
                                 Login now
                             </Button>
-
-                            {/* Sign up */}
-                            <div className="d-flex justify-content-center align-items-center">
-                                <p className="mb-0">Don't have an account?</p>
-                                <span className={`${style.signUP} ms-2`}>Sign up</span>
-                            </div>
+                            
                         </Form>
                     </Col>
                 </Row>

@@ -1,0 +1,63 @@
+/* السايدبار */
+.sidebar {
+  height: 100vh;
+  background-color: oklch(0.928 0.006 264.531);
+  padding-top: 10px;
+}
+
+/* زر الفتح / الإغلاق */
+.collapse1 {
+  padding: 8px;
+  font-size: 25px;
+  color: black;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.collapse1:hover {
+  color: rgb(157, 236, 141);
+}
+
+/* عناصر القائمة */
+.icons {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  border-radius: 8px; /* حواف خفيفة للعنصر */
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* hover على العنصر نفسه */
+.icons:hover {
+  background-color: rgba(157, 236, 141, 0.1); /* خلفية خفيفة عند المرور */
+}
+
+/* أيقونات داخل العنصر */
+.icon {
+  color: black;
+  font-size: 25px;
+  transition: all 0.3s ease;
+}
+
+/* Hover على الأيقونة فقط */
+.icon:hover {
+  color: rgb(157, 236, 141); /* تغيير اللون */
+  background-color: transparent; /* بدون خلفية */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* ظل خفيف */
+  border-radius: 5px; /* شكل لطيف للظل */
+  cursor: pointer;
+  padding: 0; /* بدون تغيير الحجم */
+}
+
+/* Responsive */
+@media screen and (max-width: 850px) {
+  .sidebar {
+    height: 100vh;
+  }
+}
