@@ -52,7 +52,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* ظل خفيف */
   border-radius: 5px; /* شكل لطيف للظل */
   cursor: pointer;
-  padding: 0; /* بدون تغيير الحجم */
+  padding: 2px; /* بدون تغيير الحجم */
 }
 
 /* Responsive */
