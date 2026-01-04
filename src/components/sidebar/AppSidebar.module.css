@@ -1,0 +1,97 @@
+/* Sidebar كامل */
+.sidebar {
+    height: 100vh;
+    background-color: oklch(100% 0.00011 271.152);
+    padding-top: 10px;
+}
+
+/* إزالة الخلفية الرمادي من ProSidebar */
+:global(.ps-menu-button) {
+    background: transparent !important;
+}
+
+:global(.ps-menu-button:active),
+:global(.ps-menu-button:focus),
+:global(.ps-menu-button:hover) {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* زر الفتح / الإغلاق */
+.collapse1 {
+    padding: 2px;
+    padding-left: 8px;
+    font-size: 28px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.collapse1:hover {
+    color: rgb(157, 236, 141);
+}
+
+
+
+/* Wrapper للأيقونة */
+.iconWrapper {
+    height: 40px;
+    padding-left: 8px;
+
+    /* عرض ثابت */
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.iconWrapper:hover {
+    background-color: rgb(157, 236, 141);
+    /* لون الخلفية عند hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    gap: 10px;
+}
+
+.icon {
+    color: black;
+    transition: all 0.35s ease;
+}
+
+.icon:hover {
+    color: white;
+    transform: scale(1.1);
+    /* تكبر الأيقونة فقط */
+
+}
+
+/* الخلفية + ظل عند hover على الحاوية */
+.iconWrapper:hover {
+    background-color: rgba(157, 236, 141, 0.708);
+    /* شفافية + لون */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    /* ظل أعمق */
+}
+
+/* Active / عند الضغط على الأيقونة */
+.iconWrapper:active {
+    transform: scale(0.95);
+    /* تأثير ضغط بسيط */
+}
+
+
+
+
+/* Responsive */
+@media screen and (max-width: 850px) {
+    .sidebar {
+        height: 100vh;
+    }
+}
