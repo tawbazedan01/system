@@ -34,16 +34,13 @@
     color: rgb(157, 236, 141);
 }
 
-
-
 /* Wrapper للأيقونة */
 .iconWrapper {
     height: 40px;
     padding-left: 8px;
-
-    /* عرض ثابت */
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
+    /* محاذاة الأيقونة للنص */
     align-items: center;
     gap: 10px;
     border-radius: 8px;
@@ -52,46 +49,98 @@
     background-color: transparent;
 }
 
+/* Hover على الحاوية */
 .iconWrapper:hover {
-    background-color: rgb(157, 236, 141);
-    /* لون الخلفية عند hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
+    background-color: rgba(157, 236, 141, 0.7);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     gap: 10px;
 }
 
+/* الأيقونة نفسها */
 .icon {
     color: black;
     transition: all 0.35s ease;
 }
 
+/* Hover على الأيقونة */
 .icon:hover {
     color: white;
     transform: scale(1.1);
     /* تكبر الأيقونة فقط */
-
 }
 
-/* الخلفية + ظل عند hover على الحاوية */
-.iconWrapper:hover {
-    background-color: rgba(157, 236, 141, 0.708);
-    /* شفافية + لون */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    /* ظل أعمق */
-}
-
-/* Active / عند الضغط على الأيقونة */
+/* Active عند الضغط على الأيقونة */
 .iconWrapper:active {
+
     transform: scale(0.95);
-    /* تأثير ضغط بسيط */
+}
+
+/* السايدبار الثاني */
+.secondSidebar {
+    position: absolute;
+    /* فوق المحتوى */
+    left: 240px;
+    /* بعد السايدبار الأول */
+    top: 0;
+    width: 220px;
+    height: 100vh;
+    background-color: oklch(100% 0.00011 271.152);
+    padding: 15px;
+    box-shadow: 2px 0 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.menuContent {
+    margin-top: 10px;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: rgba(157, 236, 141, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* إزالة النقاط من القوائم */
+ul {
+    list-style: none;
+    /* هذا يشيل الـ bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+.sidebarLink {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: flex-start;
+    /* المحاذاة عموديًا للبداية */
+    justify-content: flex-start;
+    /* المحاذاة أفقياً للبداية */
+    padding: 8px 0 8px 15px;
+    /* فوق، يمين، تحت، يسار */
+    gap: 8px;
+    /* مسافة بين أيقونة ونص */
+    transition: all 0.3s ease;
 }
 
 
+
+.sidebarLink:hover {
+    color: white;
+    background-color: rgb(157, 236, 141);
+    padding-left: 5px;
+    border-radius: 4px;
+}
 
 
 /* Responsive */
 @media screen and (max-width: 850px) {
     .sidebar {
         height: 100vh;
+    }
+
+    .secondSidebar {
+        left: 180px;
+        /* تتناسب مع السايدبار المصغّر */
+        width: 180px;
     }
 }

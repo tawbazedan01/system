@@ -1,6 +1,8 @@
 import './App.css';
 import Login from './pages/login/Login.jsx';
 import AppSidebar from "./components/sidebar/AppSidebar.jsx";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 
 function App() {
 
